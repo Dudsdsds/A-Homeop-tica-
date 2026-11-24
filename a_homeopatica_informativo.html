@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Homeopática: guia informativo sobre o que é homeopatia, seus princípios, formas farmacêuticas, evidências científicas, segurança e referências oficiais.">
+<title>A Homeopática | Guia informativo sobre homeopatia</title>
+<style>
+:root{--bg:#FAF8FC;--surface:#FFFFFF;--text:#302B38;--muted:#655D6E;--primary:#765A9E;--on-primary:#FFFFFF;--green:#6F9877;--green-soft:#DCEEDC;--border:#D5CADF;--soft:#F0EBF6;--focus:#5A3D82;--shadow:0 4px 18px rgba(48,43,56,.09)}
+:root[data-theme="dark"]{--bg:#1D1924;--surface:#292332;--text:#F5F0F8;--muted:#D0C5D8;--primary:#B79BD8;--on-primary:#241C2D;--green:#A9CDAE;--green-soft:#385441;--border:#554A60;--soft:#332B3D;--focus:#D9C6F1;--shadow:0 4px 18px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;font:1.03rem/1.7 "Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3{line-height:1.22;margin:0 0 .65em}h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.035em}h2{font-size:clamp(1.65rem,3vw,2.2rem)}h3{font-size:1.2rem}p{margin:0 0 1em}a{color:var(--primary)}a:hover{text-decoration-thickness:2px}:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:5px}
+.wrap{max-width:1160px;margin:auto;padding:0 1.25rem}section{padding:4rem 0}.muted{color:var(--muted)}.lead{font-size:1.15rem;color:var(--muted);max-width:68ch}.eyebrow{font-size:.83rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.skip{position:absolute;left:-999px;top:0;background:var(--primary);color:var(--on-primary);padding:.7rem;z-index:100}.skip:focus{left:0}
+header{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px;flex-wrap:wrap}
+.brand{font-weight:850;font-size:1.35rem;color:var(--primary);text-decoration:none;display:flex;align-items:center;gap:.55rem}.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--green-soft);color:var(--green)}
+nav ul{display:flex;gap:.15rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}nav a{display:block;padding:.48rem .62rem;border-radius:8px;text-decoration:none;color:var(--text);font-size:.94rem;font-weight:650}nav a:hover{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.6rem 1.05rem;border:2px solid var(--primary);border-radius:999px;background:var(--primary);color:var(--on-primary);font:inherit;font-weight:750;text-decoration:none;cursor:pointer}.btn.ghost{background:transparent;color:var(--primary)}
+.hero{padding:4.8rem 0 4rem;background:linear-gradient(125deg,var(--soft),var(--bg) 65%)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center}.hero-art{background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:1.5rem;box-shadow:var(--shadow)}.hero-art svg{display:block;width:100%;height:auto}.hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.1rem}.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.35rem;box-shadow:var(--shadow)}.card .icon{font-size:1.8rem;margin-bottom:.55rem}.card h3{margin-bottom:.4rem}.card p:last-child{margin-bottom:0}.soft{background:var(--soft)}
+.callout{padding:1.15rem 1.25rem;border-left:5px solid var(--green);border-radius:12px;background:var(--green-soft);color:var(--text);margin:1.3rem 0}.callout strong{display:block;margin-bottom:.25rem}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}.timeline{border-left:3px solid var(--green);padding-left:1.2rem;display:grid;gap:1rem}.timeline article{position:relative}.timeline article:before{content:"";position:absolute;left:-1.62rem;top:.35rem;width:11px;height:11px;border-radius:50%;background:var(--primary);border:3px solid var(--bg)}
+.searchbox{max-width:650px;margin:1.2rem 0}.searchbox label{display:block;font-weight:750;margin-bottom:.35rem}input{font:inherit;padding:.8rem 1rem;border:2px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);width:100%;min-height:48px}
+.pills{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}.pill{border:1px solid var(--border);border-radius:999px;padding:.45rem .85rem;background:var(--surface);color:var(--text);font:inherit;cursor:pointer}.pill[aria-pressed=true]{background:var(--primary);border-color:var(--primary);color:var(--on-primary)}
+.info-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}.info-list article[hidden]{display:none}.tag{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--green);margin-bottom:.4rem}
+.evidence{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.evidence .card:first-child{border-top:5px solid var(--green)}.evidence .card:last-child{border-top:5px solid var(--primary)}
+details.card{padding:0}details summary{padding:1rem 1.25rem;cursor:pointer;font-weight:750;min-height:48px}details .answer{padding:0 1.25rem 1.2rem;color:var(--muted)}
+.sources{padding-left:1.25rem}.sources li{margin:.6rem 0}.sources a{overflow-wrap:anywhere}
+footer{padding:2.2rem 0;background:var(--surface);border-top:1px solid var(--border)}.small{font-size:.9rem;color:var(--muted)}
+@media(max-width:800px){.hero-grid,.columns,.evidence{grid-template-columns:1fr}.bar{padding: .7rem 0}.hero{padding:3.2rem 0}.hero-art{max-width:520px}}
+@media(max-width:520px){nav ul{gap:0}nav a{padding:.45rem;font-size:.88rem}.theme-button{width:100%}section{padding:3rem 0}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#principal">Pular para o conteúdo principal</a>
+<header><div class="wrap bar">
+<a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true">✿</span>A Homeopática</a>
+<nav aria-label="Navegação principal"><ul>
+<li><a href="#conceito">Conceito</a></li><li><a href="#principios">Princípios</a></li><li><a href="#preparacoes">Preparações</a></li><li><a href="#evidencias">Evidências</a></li><li><a href="#seguranca">Segurança</a></li><li><a href="#fontes">Fontes</a></li>
+</ul></nav>
+<button class="btn ghost theme-button" id="theme" type="button" aria-pressed="false">🌙 Modo escuro</button>
+</div></header>
+<main id="principal">
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div><p class="eyebrow">Um guia para aprender e refletir</p><h1>Homeopatia: conheça os conceitos, a história e o que dizem as evidências.</h1>
+<p class="lead">A Homeopática é um espaço educativo sobre homeopatia. Aqui você encontra explicações introdutórias, informações sobre preparações, referências oficiais e um olhar crítico sobre evidências científicas e segurança.</p>
+<div class="hero-actions"><a class="btn" href="#conceito">Começar a explorar</a><a class="btn ghost" href="#evidencias">Ver evidências científicas</a></div></div>
+<div class="hero-art"><svg viewBox="0 0 440 300" role="img" aria-label="Ilustração decorativa de livros, folhas e frascos"><rect x="18" y="18" width="404" height="264" rx="24" fill="var(--soft)"/><path d="M65 235Q100 160 145 225M105 235Q88 170 55 158M130 232Q165 160 190 150" stroke="#78A783" stroke-width="10" fill="none" stroke-linecap="round"/><rect x="205" y="92" width="92" height="145" rx="13" fill="#fff" stroke="#765A9E" stroke-width="5"/><rect x="224" y="66" width="54" height="30" rx="6" fill="#A9CDAE"/><rect x="217" y="145" width="68" height="54" rx="7" fill="#DCEEDC"/><path d="M230 163h42M230 177h32" stroke="#765A9E" stroke-width="4" stroke-linecap="round"/><rect x="322" y="132" width="54" height="105" rx="11" fill="#F0EBF6" stroke="#765A9E" stroke-width="4"/><rect x="333" y="111" width="32" height="24" rx="5" fill="#A9CDAE"/><path d="M56 251h328" stroke="#765A9E" stroke-width="5" stroke-linecap="round"/><path d="M145 75q-28-28-47-2 19 27 47 2M145 75q28-28 47-2-19 27-47 2" fill="#8AB493"/></svg></div>
+</div></section>
+<section id="conceito"><div class="wrap"><p class="eyebrow">01 · Entenda</p><h2>O que é homeopatia?</h2>
+<p class="lead">A homeopatia é um sistema terapêutico criado no final do século XVIII pelo médico alemão Samuel Hahnemann. Ela se baseia em ideias próprias sobre semelhança, experimentação e diluição de substâncias.</p>
+<div class="grid" style="margin-top:1.4rem">
+<article class="card"><div class="icon">📚</div><h3>Origem histórica</h3><p>Foi sistematizada por Samuel Hahnemann na década de 1790 e se difundiu por diferentes países ao longo dos séculos XIX e XX.</p></article>
+<article class="card"><div class="icon">🧩</div><h3>Abordagem individualizada</h3><p>Na tradição homeopática, a escolha da preparação considera o conjunto de sintomas e características relatadas pela pessoa.</p></article>
+<article class="card"><div class="icon">🔬</div><h3>Um tema debatido</h3><p>Os princípios históricos da homeopatia e sua eficácia clínica precisam ser distinguidos da avaliação científica de cada alegação terapêutica.</p></article>
+</div>
+<div class="callout"><strong>Importante para interpretar o tema</strong>Descrever os princípios da homeopatia não significa afirmar que eles foram comprovados cientificamente. A avaliação de eficácia depende de estudos clínicos confiáveis.</div>
+</div></section>
+<section class="soft" id="principios"><div class="wrap"><p class="eyebrow">02 · Fundamentos tradicionais</p><h2>Quais são os princípios da homeopatia?</h2><p class="lead">Os princípios abaixo descrevem a teoria homeopática. Eles devem ser entendidos como fundamentos históricos da prática, não como fatos científicos estabelecidos.</p>
+<div class="columns" style="margin-top:1.5rem"><div class="timeline">
+<article><h3>Lei dos semelhantes</h3><p class="muted">A ideia de que uma substância capaz de provocar determinados sintomas em uma pessoa saudável poderia, em preparação homeopática, ser utilizada para sintomas semelhantes.</p></article>
+<article><h3>Experimentação em pessoas saudáveis</h3><p class="muted">Na tradição homeopática, substâncias são observadas em pessoas saudáveis para registrar sensações e sintomas atribuídos a elas.</p></article>
+<article><h3>Diluição e dinamização</h3><p class="muted">O método tradicional envolve diluições sucessivas acompanhadas de agitações (sucussões) ou triturações, conforme a forma de preparação.</p></article>
+</div><article class="card"><h3>O que significa “ultradiluição”?</h3><p>Algumas preparações passam por várias etapas de diluição. Dependendo do grau, pode ser improvável que reste alguma molécula da substância inicial. Isso levanta questões científicas sobre os mecanismos propostos.</p><p class="small">A explicação dos métodos não é uma instrução para preparar medicamentos. A manipulação exige conhecimento técnico, controle de qualidade e cumprimento das normas aplicáveis.</p></article></div>
+</div></section>
+<section id="preparacoes"><div class="wrap"><p class="eyebrow">03 · Formas farmacêuticas</p><h2>Como os medicamentos homeopáticos podem ser apresentados?</h2><p class="lead">Documentos oficiais brasileiros descrevem diferentes formas farmacêuticas. A apresentação depende da formulação e das especificações técnicas aplicáveis.</p>
+<div class="grid" style="margin-top:1.4rem">
+<article class="card"><div class="icon">⚪</div><h3>Glóbulos</h3><p>Pequenas unidades sólidas utilizadas como veículo para determinadas preparações homeopáticas.</p></article>
+<article class="card"><div class="icon">💧</div><h3>Gotas e soluções</h3><p>Apresentações líquidas. A composição e as orientações de uso devem ser verificadas no rótulo e com profissional habilitado.</p></article>
+<article class="card"><div class="icon">◻️</div><h3>Comprimidos e tabletes</h3><p>Formas sólidas previstas em compêndios oficiais para determinadas formulações.</p></article>
+<article class="card"><div class="icon">🧴</div><h3>Preparações de uso externo</h3><p>Podem incluir formas como géis, cremes e pomadas, conforme formulação e regulamentação.</p></article>
+</div><p class="small" style="margin-top:1rem">Fonte técnica: Formulário Homeopático da Farmacopeia Brasileira, 3ª edição, e Farmacopeia Homeopática Brasileira, 4ª edição.</p>
+</div></section>
+<section class="soft" id="evidencias"><div class="wrap"><p class="eyebrow">04 · Ciência e saúde</p><h2>O que dizem as evidências científicas?</h2><p class="lead">É importante diferenciar a existência de uma tradição terapêutica, o reconhecimento institucional e a demonstração de eficácia em estudos científicos.</p>
+<div class="evidence" style="margin-top:1.5rem">
+<article class="card"><span class="tag">O que mostram as avaliações</span><h3>Evidência clínica limitada</h3><p>Instituições de saúde que revisam a literatura científica apontam que há pouca evidência confiável de que a homeopatia seja eficaz para tratar condições específicas. O NHS informa que não há evidência de boa qualidade de eficácia para qualquer condição de saúde.</p></article>
+<article class="card"><span class="tag">Como interpretar</span><h3>Regulação não é comprovação de eficácia</h3><p>A existência de normas, compêndios e padrões de qualidade para preparação e controle de medicamentos não significa, por si só, que a eficácia clínica de uma terapia tenha sido demonstrada.</p></article>
+</div>
+<div class="callout"><strong>Uma decisão informada importa</strong>Não use homeopatia para adiar diagnóstico, substituir vacinas, interromper medicamentos prescritos ou deixar de procurar atendimento. Converse com um profissional de saúde sobre qualquer tratamento.</div>
+</div></section>
+<section id="brasil"><div class="wrap"><p class="eyebrow">05 · Contexto brasileiro</p><h2>Homeopatia no Brasil: referências e regulamentação</h2>
+<div class="columns"><div><p>O Ministério da Saúde apresenta a homeopatia entre as Práticas Integrativas e Complementares em Saúde (PICS) no SUS. Essa informação descreve sua presença institucional no sistema de saúde brasileiro e não deve ser confundida com uma conclusão sobre eficácia para cada doença ou indicação.</p><p>A Anvisa publica compêndios técnicos que orientam a preparação e o controle de qualidade de medicamentos homeopáticos.</p></div>
+<div class="card"><h3>Atualização importante</h3><p>A Farmacopeia Homeopática Brasileira, 4ª edição, foi aprovada pela RDC Anvisa nº 1.027, de 18 de maio de 2026, e entrou em vigor em 1º de julho de 2026. O documento reúne monografias, conceitos e métodos técnicos para o setor.</p><p><a href="https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-homeopatica/" target="_blank" rel="noopener">Consultar a Farmacopeia Homeopática na Anvisa ↗</a></p></div></div>
+</div></section>
+<section class="soft" id="seguranca"><div class="wrap"><p class="eyebrow">06 · Uso responsável</p><h2>Cuidados e segurança</h2><div class="grid">
+<article class="card"><div class="icon">🩺</div><h3>Não substitua tratamentos</h3><p>Não suspenda medicamentos prescritos nem substitua cuidados médicos por conta própria. Em caso de sintomas, procure avaliação profissional.</p></article>
+<article class="card"><div class="icon">⚠️</div><h3>Produtos podem variar</h3><p>Nem todo produto rotulado como homeopático é necessariamente isento de substâncias ativas. Alguns podem causar efeitos adversos ou interações.</p></article>
+<article class="card"><div class="icon">🏷️</div><h3>Confira a procedência</h3><p>Verifique rótulo, composição, fabricante, lote, validade e orientações de conservação. Em caso de dúvida, consulte um farmacêutico.</p></article>
+<article class="card"><div class="icon">👩‍⚕️</div><h3>Converse com profissionais</h3><p>Informe médicos e farmacêuticos sobre todos os produtos que utiliza, inclusive preparações complementares ou alternativas.</p></article>
+</div></div></section>
+<section id="duvidas"><div class="wrap"><p class="eyebrow">07 · Perguntas frequentes</p><h2>Dúvidas comuns</h2><div class="grid">
+<details class="card"><summary>Homeopatia e fitoterapia são a mesma coisa?</summary><div class="answer">Não. Fitoterapia utiliza plantas medicinais e seus derivados como base de produtos. Homeopatia é um sistema terapêutico com princípios próprios, como a lei dos semelhantes e diluições sucessivas. Os conceitos e os marcos técnicos são diferentes.</div></details>
+<details class="card"><summary>Todo medicamento homeopático é extremamente diluído?</summary><div class="answer">As preparações homeopáticas podem apresentar diferentes graus de diluição e métodos de preparação. Não é correto presumir que todos os produtos tenham a mesma composição ou concentração; consulte a informação específica do produto.</div></details>
+<details class="card"><summary>A Anvisa publicar uma farmacopeia significa que a homeopatia funciona?</summary><div class="answer">Não. A farmacopeia estabelece referências técnicas de identidade, preparação e qualidade. A demonstração de eficácia clínica exige evidências científicas próprias.</div></details>
+<details class="card"><summary>Posso parar meu medicamento convencional?</summary><div class="answer">Não faça isso sem orientação do profissional que acompanha seu tratamento. Interromper medicamentos pode trazer riscos, dependendo da condição de saúde.</div></details>
+</div></div></section>
+<section class="soft" id="fontes"><div class="wrap"><p class="eyebrow">08 · Para continuar estudando</p><h2>Fontes e referências</h2><p class="lead">As informações deste guia foram organizadas a partir de fontes institucionais e de saúde. Consulte os documentos originais para aprofundar o tema.</p>
+<ol class="sources">
+<li><strong>Agência Nacional de Vigilância Sanitária (Anvisa).</strong> Farmacopeia Homeopática Brasileira, 4ª edição. <a href="https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/farmacopeia-homeopatica/" target="_blank" rel="noopener">Página oficial da Farmacopeia Homeopática ↗</a></li>
+<li><strong>Anvisa.</strong> Formulário Homeopático da Farmacopeia Brasileira, 3ª edição. <a href="https://www.gov.br/anvisa/pt-br/assuntos/farmacopeia/formulario-homeopatico" target="_blank" rel="noopener">Consultar o Formulário Homeopático ↗</a></li>
+<li><strong>Ministério da Saúde.</strong> Homeopatia – Práticas Integrativas e Complementares em Saúde. <a href="https://www.gov.br/saude/pt-br/composicao/saps/pics/as-praticas/homeopatia" target="_blank" rel="noopener">Página do Ministério da Saúde ↗</a></li>
+<li><strong>National Center for Complementary and Integrative Health (NCCIH).</strong> Homeopathy: What You Need To Know. <a href="https://www.nccih.nih.gov/health/homeopathy" target="_blank" rel="noopener">Consultar a revisão informativa ↗</a></li>
+<li><strong>NHS inform.</strong> Homeopathy. <a href="https://www.nhsinform.scot/tests-and-treatments/medicines-and-medical-aids/complementary-medicine/homeopathy/" target="_blank" rel="noopener">Consultar a página de saúde ↗</a></li>
+</ol>
+<p class="callout"><strong>Nota editorial</strong>Este site é um material educativo independente. Não é uma farmácia, não vende produtos, não oferece consultas e não substitui aconselhamento médico ou farmacêutico. O conteúdo é introdutório e não constitui recomendação de tratamento.</p>
+</div></section>
+</main>
+<footer><div class="wrap"><strong>A Homeopática</strong><p class="small">Guia informativo e educativo sobre homeopatia · Conteúdo revisto em novembro de 2026.</p><p class="small">Este projeto apresenta conceitos e referências, distinguindo princípios históricos, regulamentação e evidência científica.</p></div></footer>
+<script>
+const root=document.documentElement,theme=document.getElementById('theme');
+function setTheme(t){root.dataset.theme=t;theme.setAttribute('aria-pressed',t==='dark');theme.textContent=t==='dark'?'☀️ Modo claro':'🌙 Modo escuro';try{localStorage.setItem('ah-theme',t)}catch(e){}}
+let saved=null;try{saved=localStorage.getItem('ah-theme')}catch(e){}setTheme(saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+theme.addEventListener('click',()=>setTheme(root.dataset.theme==='dark'?'light':'dark'));
+</script>
+</body></html>
