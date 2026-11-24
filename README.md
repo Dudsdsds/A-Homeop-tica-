@@ -1,2 +1,2 @@
-# A-Homeop-tica-
+# A-Homeopatica
 Site sobre homeopatia
